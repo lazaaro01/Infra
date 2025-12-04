@@ -1,0 +1,35 @@
+# Terraform local files
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OS-specific files
+.env
+.env.local
+.env.*.local
+
+# Build and dependency directories
+node_modules/
+dist/
+build/
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
