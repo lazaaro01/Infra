@@ -33,3 +33,6 @@ logs/
 *.tmp
 *.temp
 *.bak
+
+# Pipeline and CI/CD files
+PIPELINE.md
