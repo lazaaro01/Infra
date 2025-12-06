@@ -43,7 +43,7 @@ jobs:
 
       - name: Terraform Init
         id: init
-        run: terraform init -no-color -get-plugins=false
+        run: terraform init -no-color -get-plugins=false  # Desabilita a verificação da assinatura do provedor
 
       - name: Terraform Validate
         id: validate
@@ -63,7 +63,6 @@ jobs:
             const plan = fs.readFileSync('tfplan', 'utf8');
             
             const comment = `## Terraform Plan Output
-            
             \`\`\`
             ${plan}
             \`\`\``;
@@ -108,7 +107,7 @@ jobs:
           terraform_version: ${{ env.TF_VERSION }}
 
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -no-color -get-plugins=false  # Desabilita a verificação da assinatura do provedor
 
       - name: Terraform Apply
         run: terraform apply -auto-approve -no-color
@@ -152,7 +151,7 @@ jobs:
           terraform_version: ${{ env.TF_VERSION }}
 
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -no-color -get-plugins=false  # Desabilita a verificação da assinatura do provedor
 
       - name: Terraform Destroy
         run: terraform destroy -auto-approve -no-color
